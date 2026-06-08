@@ -1,0 +1,19 @@
+# Build artefacts (in case someone clones and builds locally)
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# Release-asset staging (source zip is built locally and uploaded via gh,
+# not committed — it'd just go out of date with the actual source).
+syncorswim-source-*.zip
+.source-zip-staging/
+
+# OS / editor noise
+Thumbs.db
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
