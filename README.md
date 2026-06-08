@@ -15,7 +15,7 @@ Both fixes are **client-side only**. The server (host) does not need any change.
 
 ## Install (binary distribution)
 
-The simplest path: download the installer zip from [Releases](../../releases), extract anywhere, and double-click `Install-NitroxSyncFix.bat`. Full instructions in [INSTALL.md](INSTALL.md).
+The simplest path: download `SyncOrSwim-Installer.zip` from [Releases](../../releases), extract anywhere, and double-click `Install-SyncOrSwim.bat`. Full instructions in [INSTALL.md](INSTALL.md).
 
 **Both players in a co-op session must install this for the fix to fully work.**
 

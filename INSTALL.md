@@ -39,7 +39,7 @@ If not already installed, install via Steam (or Epic). Launch it once and let it
 
 ### 1. Get the installer
 
-Download `Nitrox-SyncFix-Installer.zip` from the [latest release](../../releases).
+Download `SyncOrSwim-Installer.zip` from the [latest release](../../releases).
 
 ### 2. Unblock the zip
 
@@ -49,7 +49,7 @@ Windows blocks scripts from "internet" zip files by default. Right-click the dow
 
 1. Extract the zip to any folder (Desktop is fine). All eight files must end up in the **same folder**.
 2. Make sure Nitrox Launcher and Subnautica are **closed**.
-3. Double-click **`Install-NitroxSyncFix.bat`**.
+3. Double-click **`Install-SyncOrSwim.bat`**.
 4. If SmartScreen appears: **More info** → **Run anyway**.
 5. The script auto-detects your Nitrox folder. If it can't, paste the full path to the folder containing `Nitrox.Launcher.exe` when prompted.
 6. Wait for `Done.` Press Enter to close.
@@ -62,7 +62,7 @@ Launch `Nitrox.Launcher.exe`. It should start as normal — there's no version l
 
 ## Uninstall
 
-Double-click `Uninstall-NitroxSyncFix.bat`. It restores the most recent backup of each patched DLL.
+Double-click `Uninstall-SyncOrSwim.bat`. It restores the most recent backup of each patched DLL.
 
 ---
 
@@ -79,7 +79,7 @@ A mixed co-op session (one player on patched DLLs, one on stock 1.8.1.0) only **
 | Launcher won't open / crashes on launch | .NET 9 Desktop Runtime not installed (Part A, step 1). |
 | Installer says "Patched DLLs missing" | The zip wasn't fully extracted — all eight files must be in the same folder as the .bat file. |
 | Installer says "Close these processes first" | Quit Nitrox Launcher and Subnautica fully, then re-run. |
-| `.bat` opens and immediately closes with no output | Right-click `Install-NitroxSyncFix.ps1` → **Properties** → **Unblock** → **OK**, then re-run the .bat. |
+| `.bat` opens and immediately closes with no output | Right-click `Install-SyncOrSwim.ps1` → **Properties** → **Unblock** → **OK**, then re-run the .bat. |
 | Connected fine but deposits still desync | Confirm your partner also ran the installer. |
 | Water level still jumps after a breach | Expected if no player has been in the base while it was flooding — the simulating client broadcasts at 1 Hz, so the receiver catches up within ~1 second of being in range. |
 
