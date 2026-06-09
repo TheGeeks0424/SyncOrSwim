@@ -56,7 +56,7 @@ If you see water-level "stutter" or visible step-wise updates, drop this to `0.3
 
 ## Authors
 
-- **Connor Sorey** ([@TheGeeks0424](https://github.com/TheGeeks0424))
+- **Connor** ([@TheGeeks0424](https://github.com/TheGeeks0424))
 - **Zach**
 
 Upstream Nitrox is the work of the [SubnauticaNitrox contributors](https://github.com/SubnauticaNitrox/Nitrox/graphs/contributors). This project is a derivative work.
