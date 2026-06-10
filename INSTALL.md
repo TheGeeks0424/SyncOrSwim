@@ -47,8 +47,8 @@ Windows blocks scripts from "internet" zip files by default. Right-click the dow
 
 ### 3. Extract and run
 
-1. Extract the zip to any folder (Desktop is fine). All eight files must end up in the **same folder**.
-2. Make sure Nitrox Launcher and Subnautica are **closed**.
+1. Extract the zip to any folder (Desktop is fine). Everything must end up in the **same folder**, including the `server` subfolder (it holds the DLL the Nitrox *server* loads — the installer needs it even on machines that only play).
+2. Make sure Nitrox Launcher, Subnautica, **and the Nitrox server** are **closed**.
 3. Double-click **`Install-SyncOrSwim.bat`**.
 4. If SmartScreen appears: **More info** → **Run anyway**.
 5. The script auto-detects your Nitrox folder. If it can't, paste the full path to the folder containing `Nitrox.Launcher.exe` when prompted.
@@ -66,9 +66,14 @@ Double-click `Uninstall-SyncOrSwim.bat`. It restores the most recent backup of e
 
 ---
 
-## Both players must install this
+## Everyone installs this — both players AND the host
 
-A mixed co-op session (one player on patched DLLs, one on stock 1.8.1.0) only **partially** works: the patched player's deposits will sync; the unpatched player's deposits will still desync. The fix has to be on both sides to be complete.
+Run the same installer on every machine involved:
+
+- **Players:** a mixed session (one player patched, one stock) only **partially** works — the patched player's deposits sync; the unpatched player's deposits still desync.
+- **Host:** the machine running the Nitrox server must also run the installer, or base flooding will not sync (the server needs the patched model DLL to understand the new flood-sync message). The storage fix works even with an unpatched host.
+
+Unpatched players can still connect and play normally either way.
 
 ---
 
@@ -77,10 +82,11 @@ A mixed co-op session (one player on patched DLLs, one on stock 1.8.1.0) only **
 | Symptom | Fix |
 |---|---|
 | Launcher won't open / crashes on launch | .NET 9 Desktop Runtime not installed (Part A, step 1). |
-| Installer says "Patched DLLs missing" | The zip wasn't fully extracted — all eight files must be in the same folder as the .bat file. |
-| Installer says "Close these processes first" | Quit Nitrox Launcher and Subnautica fully, then re-run. |
+| Installer says "Patched DLLs missing" | The zip wasn't fully extracted — all files (including the `server` subfolder) must sit next to the .bat file. |
+| Installer says "Close these processes first" | Quit Nitrox Launcher, Subnautica, and the Nitrox server fully, then re-run. |
 | `.bat` opens and immediately closes with no output | Right-click `Install-SyncOrSwim.ps1` → **Properties** → **Unblock** → **OK**, then re-run the .bat. |
 | Connected fine but deposits still desync | Confirm your partner also ran the installer. |
+| Storage syncs but flooding doesn't | Confirm the **host** machine also ran the installer (flood sync requires the patched server DLL). |
 | Water level still jumps after a breach | Expected if no player has been in the base while it was flooding — the simulating client broadcasts at 1 Hz, so the receiver catches up within ~1 second of being in range. |
 
 If something behaves differently than the table above, open an issue with the output of the installer script + your `%APPDATA%\Nitrox\logs\` from the failing session.
